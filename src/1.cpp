@@ -10,14 +10,14 @@
 
 void prod_array(int* src, int* dest, size_t len)
 {
+    int prod = 1;
     for (size_t i = 0; i < len; ++i)
     {
-        int prod = 1;
-        for (size_t j = 0; j < len; ++j)
-        {
-            prod *= src[j];
-        }
-
+        prod *= src[i];
+    }
+    
+    for (size_t i = 0; i < len; ++i)
+    {
         int n = 0;
         int diff = prod - src[i] * n;
         while (diff != 0)
